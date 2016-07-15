@@ -16,7 +16,7 @@ apply plugin: 'jacoco'
 apply plugin: 'war'
 
 jar {
-    baseName = 'template'
+    baseName = 'java'
     version =  '0.1.0'
 }
 
@@ -32,7 +32,8 @@ dependencies {
     
     compile("org.springframework.boot:spring-boot-starter-websocket")
     compile("org.springframework:spring-messaging")
-    
+    compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+    compile group: 'commons-io', name: 'commons-io', version: '2.4'
     testCompile("junit:junit")
 }
 
